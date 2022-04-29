@@ -1,0 +1,41 @@
+.carousel-indicators {
+  display: none;
+}
+.carousel-caption {
+  /* position: absolute;
+  right: 31%;
+  bottom: 12.25rem;
+  left: 9%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center; */
+  /* display: flex;
+  text-align: start;
+  position: absolute;
+  bottom: 40%; */
+}
+.captions h3 {
+  font-family: "Rajdhani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 62px;
+}
+.captions h3 span {
+  position: relative;
+  color: var(--color-red);
+}
+/* .captions h3 span::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../assets/images/title-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+} */
+.captions p {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+}
