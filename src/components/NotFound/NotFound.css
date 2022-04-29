@@ -1,0 +1,43 @@
+.not-found-container {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.not-found-container h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.not-found-container h5 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.not-found-container p {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.not-found-btn {
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid var(--color-heading);
+  border-radius: 8px;
+  color: var(--color-heading);
+  padding: 6px 25px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s;
+}
+.not-found-btn:hover {
+  background-color: var(--color-heading);
+  border: 2px solid var(--color-heading);
+  color: var(--color-white);
+}
