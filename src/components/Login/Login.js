@@ -1,5 +1,5 @@
 import React from "react";
-import { FloatingLabel, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
@@ -15,7 +15,7 @@ const Login = () => {
       <div className="login-bg col-4 mx-auto">
         <h1>Login to your account</h1>
         <p>
-          Don't have an account <Link to="">Sign Up Free</Link>
+          Don't have an account? <Link to="/signup">Sign Up Free</Link>
         </p>
         <Link className="google-btn" to="">
           Continue with Google
@@ -26,7 +26,13 @@ const Login = () => {
           <div className="bars"></div>
         </div>
         <form>
-          <FloatingLabel
+          <Form.Group className="mb-3">
+            <Form.Control type="email" placeholder="Email address" required />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Control type="password" placeholder="Password" required />
+          </Form.Group>
+          {/* <FloatingLabel
             controlId="floatingInput"
             label="Email address"
             className="mb-3"
@@ -39,10 +45,10 @@ const Login = () => {
           </FloatingLabel>
           <FloatingLabel controlId="floatingPassword" label="Password">
             <Form.Control type="password" placeholder="Password" required />
-          </FloatingLabel>
-          <div className="my-3">
+          </FloatingLabel> */}
+          <div className="my-3 text-end">
             <Link to="" className="forget-password">
-              Forget Password
+              Forget Password?
             </Link>
           </div>
           <button type="submit" className="form-login-btn">
