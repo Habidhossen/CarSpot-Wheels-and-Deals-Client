@@ -8,7 +8,7 @@ const Login = () => {
     <div
       style={{
         backgroundColor: "var(--color-bg-light)",
-        height: "100vh",
+        height: "100%",
         paddingTop: "50px",
       }}
     >

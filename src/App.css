@@ -12,6 +12,7 @@ font-family: 'Rajdhani', sans-serif; */
 }
 /* common styles and utilities */
 body {
+  background-color: var(--color-bg-light);
   font-family: "Poppins", sans-serif;
 }
 /* styles variable */
