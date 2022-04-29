@@ -1,0 +1,16 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap");
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Rajdhani', sans-serif; */
+
+/* reset all default styles (margin, padding) */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* common styles and utilities */
+body {
+  font-family: "Poppins", sans-serif;
+}
