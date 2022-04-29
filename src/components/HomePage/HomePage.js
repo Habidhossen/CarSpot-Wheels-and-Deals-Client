@@ -16,7 +16,7 @@ const HomePage = () => {
             <Carousel.Caption>
               <div className="captions">
                 <h3>
-                  Welcome to <span>CarSpot</span>
+                  Welcome to <span>Car</span>Spot
                 </h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
@@ -25,7 +25,7 @@ const HomePage = () => {
               </div>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item interval={500}>
+          <Carousel.Item interval={50000}>
             <img className="d-block w-100" src={slider2} alt="Second slide" />
             <Carousel.Caption>
               <div className="captions">
