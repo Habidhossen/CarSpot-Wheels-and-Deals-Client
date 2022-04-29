@@ -1,0 +1,72 @@
+.login-bg {
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 10px;
+}
+.login-bg h1 {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+.login-bg p {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.bars {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-text-2);
+}
+.bar-text {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-2);
+}
+.forget-password {
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+}
+input {
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.google-btn {
+  font-family: "Rajdhani", sans-serif;
+  display: block;
+  text-decoration: none;
+  background-color: var(--color-google);
+  border-radius: 6px;
+  color: var(--color-white);
+  padding: 8px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s;
+}
+.google-btn:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+.form-login-btn {
+  font-family: "Rajdhani", sans-serif;
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--color-blue);
+  border-radius: 6px;
+  border: none;
+  color: var(--color-white);
+  padding: 8px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s;
+}
+.form-login-btn:hover {
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+}

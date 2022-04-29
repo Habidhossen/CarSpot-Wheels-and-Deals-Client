@@ -14,3 +14,20 @@ font-family: 'Rajdhani', sans-serif; */
 body {
   font-family: "Poppins", sans-serif;
 }
+/* styles variable */
+:root {
+  --color-red: #e52d27;
+  --color-red-dark: #da0000;
+  --color-blue: #4460f1;
+  --color-blue-dark: #1a34b8;
+  --color-green: #46a203;
+  --color-green-light: #52af10;
+  --color-orange: #ff8000;
+  --color-google: #cc4444;
+  --color-bg-light: #f6f6f6;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-heading: #1d293f;
+  --color-text: #3b4656;
+  --color-text-2: #7c8087;
+}

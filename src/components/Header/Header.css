@@ -1,0 +1,31 @@
+.navbar-light .navbar-brand {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 20px;
+  color: var(--color-heading);
+}
+.login-btn {
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid var(--color-heading);
+  border-radius: 8px;
+  color: var(--color-heading);
+  padding: 6px 25px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  background-color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  color: white;
+}
