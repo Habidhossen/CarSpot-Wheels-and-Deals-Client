@@ -16,7 +16,7 @@ const CarLatestNews = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h1 className="section-title">What our clients say</h1>
+        <h1 className="section-title">Latest news</h1>
         <div className="row row-cols-3 g-3">
           {reviews.slice(0, 6).map((review) => (
             <SingleReviewCard key={review.id} review={review} />
@@ -25,7 +25,7 @@ const CarLatestNews = () => {
         <div className="d-flex justify-content-end mt-3">
           {/* <button className="not-found-btn">See all reviews</button> */}
           <Link to="" className="not-found-btn">
-            See All Reviews <FontAwesomeIcon icon={faArrowRightLong} />
+            See All News <FontAwesomeIcon icon={faArrowRightLong} />
           </Link>
         </div>
       </div>
