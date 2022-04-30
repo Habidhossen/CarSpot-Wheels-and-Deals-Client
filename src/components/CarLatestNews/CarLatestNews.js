@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SingleReviewCard from "../SingleReviewCard/SingleReviewCard";
-import "./ClientReviews.css";
 
-const ClientReviews = () => {
+const CarLatestNews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -34,4 +33,4 @@ const ClientReviews = () => {
   );
 };
 
-export default ClientReviews;
+export default CarLatestNews;

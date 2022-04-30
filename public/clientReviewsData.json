@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Flinn J.",
+    "msg": "I am really satisfied with my Canon Camera. I will refer everyone I know. You guys rock! The best on the net!",
+    "rating": "5.00",
+    "image": "https://media.creativemornings.com/uploads/user/avatar/268533/cv_self_portrait_b_w_square.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lilias G.",
+    "msg": "Very easy to use. No matter where you go, Canon Camera is the coolest, most happening thing around! Wow what great service, I love it!",
+    "rating": "4.00",
+    "image": "https://www.allgaeuherz.de/wp-content/uploads/2019/07/portrait-square-10.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Joel P.",
+    "msg": "This is simply unbelievable! Buy this now. I couldn't have asked for more than this.",
+    "rating": "4.50",
+    "image": "https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png"
+  },
+  {
+    "id": 4,
+    "name": "Berri L.",
+    "msg": "Camera should be nominated for service of the year. Buy this now. If you aren't sure, always go for Camera. It fits our needs perfectly.",
+    "rating": "5.00",
+    "image": "https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png"
+  },
+  {
+    "id": 5,
+    "name": "Welby J.",
+    "msg": "Great job, I will definitely be ordering again!",
+    "rating": "4.00",
+    "image": "https://media.creativemornings.com/uploads/user/avatar/268533/cv_self_portrait_b_w_square.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Celestyna T.",
+    "msg": "I use this product. I was amazed at the quality of Camera. I am so pleased with this product. Really good.",
+    "rating": "4.50",
+    "image": "http://www.tashschool.org/wp-content/uploads/2019/09/portrait-square-08.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Nissy Q.",
+    "msg": "Absolutely wonderful! You guys rock! The very best. I use Camera often.",
+    "rating": "5.00",
+    "image": "https://www.allgaeuherz.de/wp-content/uploads/2019/07/portrait-square-10.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Jeni W.",
+    "msg": "I just can't get enough of Camera. I want to get a T-Shirt with Camera on it so I can show it off to everyone.",
+    "rating": "4.00",
+    "image": "http://www.tashschool.org/wp-content/uploads/2019/09/portrait-square-08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Logan N.",
+    "msg": "I love your system. I don't know what else to say.",
+    "rating": "4.50",
+    "image": "https://www.mecgale.com/wp-content/uploads/2017/08/dummy-profile.png"
+  }
+]
