@@ -21,8 +21,9 @@ const HomePage = () => {
                   Welcome to <span>Car</span>Spot
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                  eum debitis recusandae omnis praesentium placeat.
+                  If you're looking for promotional vehicles or modern classic
+                  imported vehicles, come to The CarSpot Warehouse. We are a
+                  genuine vehicle importer and wholesaler.
                 </p>
               </div>
             </Carousel.Caption>
@@ -35,8 +36,9 @@ const HomePage = () => {
                   Thousand of <span>car</span> your choice
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                  eum debitis recusandae omnis praesentium placeat.
+                  If you're looking for promotional vehicles or modern classic
+                  imported vehicles, come to The CarSpot Warehouse. We are a
+                  genuine vehicle importer and wholesaler.
                 </p>
               </div>
             </Carousel.Caption>
@@ -49,8 +51,9 @@ const HomePage = () => {
                   Find your <span>dream</span> car
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
-                  eum debitis recusandae omnis praesentium placeat.
+                  If you're looking for promotional vehicles or modern classic
+                  imported vehicles, come to The CarSpot Warehouse. We are a
+                  genuine vehicle importer and wholesaler.
                 </p>
               </div>
             </Carousel.Caption>

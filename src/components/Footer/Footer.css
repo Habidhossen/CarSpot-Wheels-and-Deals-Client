@@ -1,4 +1,5 @@
 footer {
+  font-family: "Rajdhani", sans-serif;
   background-color: var(--color-heading);
   color: var(--color-bg-light);
   padding: 60px 20px;

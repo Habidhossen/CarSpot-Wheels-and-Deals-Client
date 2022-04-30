@@ -15,8 +15,8 @@ const Footer = () => {
         </div>
         <div className="col footer-desc">
           <p>
-            Copyright &#169; {year} CarSpot - Wheels and Deals. All Rights
-            Reserved
+            Copyright &#169; {year} <strong>CarSpot - Wheels and Deals.</strong>{" "}
+            All Rights Reserved
           </p>
           <div className="d-flex">
             <a href="">Privacy Policy</a>
