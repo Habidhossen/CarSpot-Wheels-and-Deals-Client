@@ -20,12 +20,17 @@
   border-radius: 50%;
 }
 .card-title {
-  margin-top: 12px;
+  font-family: "Rajdhani", sans-serif;
+  margin-top: 8px;
   font-size: 18px;
   font-weight: 700;
+  color: var(--color-text);
 }
 .card-text {
+  font-family: "Rajdhani", sans-serif;
+  color: var(--color-text-2);
 }
 .card-rating {
+  color: var(--color-orange);
   margin: 14px 0 12px;
 }

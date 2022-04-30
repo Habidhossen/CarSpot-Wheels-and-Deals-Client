@@ -19,7 +19,7 @@ const ClientReviews = () => {
       <div className="container mx-auto">
         <h1 className="section-title">What our clients say</h1>
         <div className="row row-cols-3 g-3">
-          {reviews.slice(0, 6).map((review) => (
+          {reviews.map((review) => (
             <SingleReviewCard key={review.id} review={review} />
           ))}
         </div>

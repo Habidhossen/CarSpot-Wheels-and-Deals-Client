@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "New Toyota Cars Will Automatically Go into Park and Shut the Engine Off",
+    "desc": "Starting with the 2020 model year, Toyota is adding two new safety technologies to many of its models, calling the move part of the brand's relentless commitment to continuous improvement. The new features are focused on the safety of parked—or almost parked—vehicles.",
+    "image": "https://i.ibb.co/3FmzZ2Q/car1.png"
+  },
+  {
+    "id": 2,
+    "title": "10 Features Your New Car Should Have",
+    "desc": "A few years ago, we got along just fine without a screen on the dashboard or in the center stack. Buttons and knobs were proliferating, though. Now, in nearly every new car, a screen delivers important visual information, whether via the backup camera or navigation map. And this is how we've become accustomed to accessing and regulating audio, climate, our phone, and more.",
+    "image": "https://i.ibb.co/vdNSJ9q/car2.png"
+  },
+  {
+    "id": 3,
+    "title": "Here's What the iOS 13 Software Update Means for Apple CarPlay",
+    "desc": "The new iPhone software debuts this fall and is currently available in a beta version. When iOS 13 comes to your iPhone this fall, it'll do more than just improve your selfies. It will also improve the interface between your phone and your car with some significant tweaks to Apple CarPlay. Representatives from Apple came by our office this week to give us a taste of what's to come.",
+    "image": "https://i.ibb.co/phM6QKf/car3.png"
+  },
+  {
+    "id": 4,
+    "title": "This Is How the Mercedes-Benz GLS and GLE's Bounce Mode Works",
+    "desc": "Free Driving Assist is a off-road mode that helps Mercedes-Benz GLS and GLE drivers get free when they're stuck in sand or mud. The feature is part of a $6500 option called E Active body control, but it requires 20-inch or larger wheels. An air suspension comes standard on the GLS and GLE and it also allows for adjustment of individual wheel ride heights.",
+    "image": "https://i.ibb.co/DtBHpmw/car4.png"
+  },
+  {
+    "id": 5,
+    "title": "2023 Acura Integra Starts at $31,895",
+    "desc": "The 2023 Acura Integra will arrive in dealerships in June starting at $31,895. It comes standard with a continuously variable automatic transmission, but a six-speed manual is available and increases the price to $36,895. Power comes from a 200-hp turbocharged 1.5-liter four cylinder shared with the Honda Civic Si.",
+    "image": "https://i.ibb.co/QvNG570/car5.png"
+  },
+  {
+    "id": 6,
+    "title": "1991 Nissan Figaro is Our BaT Auction Pick of the Day",
+    "desc": "This 1991 Nissan Figaro is up for sale right now on Bring a Trailer with the auction set to end on May 2. Designed with retro styling, a tiny 1.0-liter four-cylinder engine, and a retractable convertible top, the Figaro is a unique car from the Japanese domestic market. This particular one has spent time in the UK and wears custom Firenze Red paint.",
+    "image": "https://i.ibb.co/dGzpW5L/car6.png"
+  }
+]

@@ -1,0 +1,26 @@
+.news-card {
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.news-card-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+}
+.news-card-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.news-card-text {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  color: var(--color-text-2);
+}

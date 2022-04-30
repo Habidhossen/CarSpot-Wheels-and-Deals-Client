@@ -11,7 +11,12 @@ const SingleReviewCard = ({ review }) => {
       <div className="custom-card">
         <img className="card-img" src={image} alt="" />
         <p className="card-rating">
-          Rating: <span className="font-semibold">{rating}</span>{" "}
+          {/* Rating: <span className="font-semibold">{rating}</span>{" "}
+          <FontAwesomeIcon icon={faStar} /> */}
+          <FontAwesomeIcon icon={faStar} />
+          <FontAwesomeIcon icon={faStar} />
+          <FontAwesomeIcon icon={faStar} />
+          <FontAwesomeIcon icon={faStar} />
           <FontAwesomeIcon icon={faStar} />
         </p>
         <p className="card-text">&#8220; {msg} &#8221;</p>
