@@ -16,7 +16,9 @@ const CarLatestNews = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h1 className="section-title">Latest news</h1>
+        <h1 className="section-title">
+          Latest <span>news</span>
+        </h1>
         <div className="row row-cols-3 g-3">
           {carNews.map((news) => (
             <SingleNewsCard key={news.id} news={news} />

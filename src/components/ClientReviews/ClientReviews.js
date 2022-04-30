@@ -17,7 +17,9 @@ const ClientReviews = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h1 className="section-title">What our clients say</h1>
+        <h1 className="section-title">
+          What our <span>clients</span> say
+        </h1>
         <div className="row row-cols-3 g-3">
           {reviews.map((review) => (
             <SingleReviewCard key={review.id} review={review} />
