@@ -18,7 +18,9 @@ const SingleInventoryCard = ({ car }) => {
         <h1 className="inventory-card-title">{name}</h1>
         <h3 className="inventory-card-price">$ {price}</h3>
         <p className="inventory-card-desc">{desc}</p>
-        <h5 className="inventory-card-supplier">Supplier: {supplier}</h5>
+        <h5 className="inventory-card-supplier">
+          Supplier: <span>{supplier}</span>
+        </h5>
         <div className="d-flex justify-content-center">
           <Link to="" className="inventory-card-btn">
             Stock Update

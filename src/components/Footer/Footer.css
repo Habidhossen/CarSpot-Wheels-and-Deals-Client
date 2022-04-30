@@ -1,12 +1,16 @@
 footer {
+  display: flex;
+  justify-content: center;
   font-family: "Rajdhani", sans-serif;
   background-color: var(--color-heading);
   color: var(--color-bg-light);
   padding: 60px 20px;
 }
 .footer-desc a {
-  /* text-decoration: none; */
   color: var(--color-bg-light);
+}
+.footer-desc span {
+  font-weight: 600;
 }
 .vertical-line-sm {
   height: 20px;

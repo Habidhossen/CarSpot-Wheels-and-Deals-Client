@@ -35,12 +35,15 @@
   font-family: "Rajdhani", sans-serif;
   font-size: 17px;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text-2);
 }
 .inventory-card-supplier {
   font-family: "Rajdhani", sans-serif;
   font-size: 16px;
   font-weight: 600;
+  color: var(--color-text-2);
+}
+.inventory-card-supplier span {
   color: #ed7014;
 }
 .inventory-card-btn {
