@@ -2,32 +2,31 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SingleReviewCard from "../SingleReviewCard/SingleReviewCard";
-import "./ClientReviews.css";
+import SingleInventoryCard from "../SingleInventoryCard/SingleInventoryCard";
 
-const ClientReviews = () => {
-  const [reviews, setReviews] = useState([]);
+const InventoryItems = () => {
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("clientReviewsData.json")
+    fetch("carsData.json")
       .then((res) => res.json())
-      .then((data) => setReviews(data));
+      .then((data) => setCars(data));
   }, []);
 
   return (
     <section>
       <div className="container mx-auto">
         <h1 className="section-title">
-          What our <span>clients</span> say
+          <span>Inventory</span> Items
         </h1>
         <div className="row row-cols-3 g-3">
-          {reviews.map((review) => (
-            <SingleReviewCard key={review.id} review={review} />
+          {cars.map((car) => (
+            <SingleInventoryCard key={car.id} car={car} />
           ))}
         </div>
         <div className="d-flex justify-content-end mt-3">
           <Link to="" className="not-found-btn">
-            See All Reviews <FontAwesomeIcon icon={faArrowRightLong} />
+            Manage Inventories <FontAwesomeIcon icon={faArrowRightLong} />
           </Link>
         </div>
       </div>
@@ -35,4 +34,4 @@ const ClientReviews = () => {
   );
 };
 
-export default ClientReviews;
+export default InventoryItems;

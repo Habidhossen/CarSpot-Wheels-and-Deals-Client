@@ -3,6 +3,7 @@ import CarLatestNews from "../CarLatestNews/CarLatestNews";
 import ClientReviews from "../ClientReviews/ClientReviews";
 import Footer from "../Footer/Footer";
 import HomeCarousel from "../HomeCarousel/HomeCarousel";
+import InventoryItems from "../InventoryItems/InventoryItems";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -11,6 +12,10 @@ const HomePage = () => {
       {/* carousel section start here */}
       <HomeCarousel />
       {/* carousel section end here */}
+
+      {/* inventory-items section start here */}
+      <InventoryItems />
+      {/* inventory-items end here */}
 
       {/* client-reviews section start here */}
       <ClientReviews />
