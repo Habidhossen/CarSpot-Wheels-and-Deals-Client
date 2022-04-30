@@ -8,7 +8,7 @@
   align-items: center;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 .custom-card:hover {

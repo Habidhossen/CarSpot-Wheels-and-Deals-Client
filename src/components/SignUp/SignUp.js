@@ -11,7 +11,7 @@ const SignUp = () => {
         paddingTop: "50px",
       }}
     >
-      <div className="login-bg col-4 mx-auto">
+      <div className="login-bg col-11 col-sm-8 col-md-6 col-lg-4 mx-auto">
         <h1 className="mb-4">Sign up for free</h1>
         <form>
           <Form.Group className="mb-3">

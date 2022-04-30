@@ -11,6 +11,9 @@
   margin-left: 20px;
   color: var(--color-heading);
 }
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--color-red);
+}
 .login-btn {
   font-family: "Rajdhani", sans-serif;
   text-decoration: none;
@@ -22,7 +25,7 @@
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .login-btn:hover {
   background-color: var(--color-red);

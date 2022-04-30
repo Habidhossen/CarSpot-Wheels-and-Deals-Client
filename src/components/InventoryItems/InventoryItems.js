@@ -19,7 +19,7 @@ const InventoryItems = () => {
         <h1 className="section-title">
           <span>Inventory</span> Items
         </h1>
-        <div className="row row-cols-3 g-3">
+        <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
           {cars.map((car) => (
             <SingleInventoryCard key={car.id} car={car} />
           ))}

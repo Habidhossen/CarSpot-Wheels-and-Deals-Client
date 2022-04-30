@@ -19,7 +19,7 @@ const CarLatestNews = () => {
         <h1 className="section-title">
           Latest <span>news</span>
         </h1>
-        <div className="row row-cols-3 g-3">
+        <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
           {carNews.map((news) => (
             <SingleNewsCard key={news.id} news={news} />
           ))}

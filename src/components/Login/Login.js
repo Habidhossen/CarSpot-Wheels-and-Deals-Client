@@ -12,7 +12,7 @@ const Login = () => {
         paddingTop: "50px",
       }}
     >
-      <div className="login-bg col-4 mx-auto">
+      <div className="login-bg col-11 col-sm-8 col-md-6 col-lg-4 mx-auto">
         <h1>Login to your account</h1>
         <p>
           Don't have an account? <Link to="/signup">Sign Up Free</Link>

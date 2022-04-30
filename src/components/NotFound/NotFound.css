@@ -34,7 +34,7 @@
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .not-found-btn:hover {
   background-color: var(--color-heading);

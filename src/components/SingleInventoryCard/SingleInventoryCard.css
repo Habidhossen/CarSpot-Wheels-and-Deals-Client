@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .inventory-card-img {
   width: 100%;
@@ -60,7 +60,7 @@
   font-size: 18px;
   font-weight: 600;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .inventory-card-btn:hover {
   background-color: var(--color-green);

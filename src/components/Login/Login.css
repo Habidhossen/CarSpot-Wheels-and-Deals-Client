@@ -47,7 +47,7 @@
   font-size: 18px;
   font-weight: 600;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .google-btn:hover {
   background-color: var(--color-red);
@@ -65,7 +65,7 @@
   font-size: 18px;
   font-weight: 600;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .form-login-btn:hover {
   background-color: var(--color-blue-dark);
