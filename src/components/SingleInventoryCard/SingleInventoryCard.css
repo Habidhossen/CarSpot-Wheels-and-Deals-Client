@@ -27,7 +27,7 @@
 }
 .inventory-card-price {
   font-family: "Rajdhani", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--color-heading);
 }
@@ -35,13 +35,14 @@
   font-family: "Rajdhani", sans-serif;
   font-size: 17px;
   font-weight: 500;
-  color: var(--color-text-2);
+  color: var(--color-text);
 }
 .inventory-card-supplier {
   font-family: "Rajdhani", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--color-text-2);
+  text-transform: uppercase;
 }
 .inventory-card-supplier span {
   color: #ed7014;
@@ -69,4 +70,5 @@
 .badge {
   background-color: #e8f5e9;
   color: #388e3c;
+  border-radius: 50px;
 }
