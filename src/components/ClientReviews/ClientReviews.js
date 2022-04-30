@@ -26,7 +26,7 @@ const ClientReviews = () => {
           ))}
         </div>
         <div className="d-flex justify-content-end mt-3">
-          <Link to="" className="not-found-btn">
+          <Link to="" className="see-more-btn">
             See All Reviews <FontAwesomeIcon icon={faArrowRightLong} />
           </Link>
         </div>

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-desc">
-        <p>
+        <p className="mb-2">
           Copyright &#169; {year} <span>CarSpot - Wheels and Deals.</span> All
           Rights Reserved
         </p>

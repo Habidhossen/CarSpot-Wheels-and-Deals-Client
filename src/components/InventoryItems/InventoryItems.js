@@ -25,7 +25,7 @@ const InventoryItems = () => {
           ))}
         </div>
         <div className="d-flex justify-content-end mt-3">
-          <Link to="" className="not-found-btn">
+          <Link to="" className="see-more-btn">
             Manage Inventories <FontAwesomeIcon icon={faArrowRightLong} />
           </Link>
         </div>
