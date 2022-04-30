@@ -25,7 +25,7 @@
   transition: 0.3s;
 }
 .login-btn:hover {
-  background-color: var(--color-blue);
-  border: 2px solid var(--color-blue);
+  background-color: var(--color-red);
+  border: 2px solid var(--color-red);
   color: white;
 }
