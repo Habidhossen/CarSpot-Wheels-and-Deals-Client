@@ -1,8 +1,39 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../Firebase/firebase.init";
+import Loader from "../Loader/Loader";
 
 const SignUp = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const navigate = useNavigate();
+
+  // handle registration using name, email and password
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    createUserWithEmailAndPassword(email, password);
+  };
+
+  // if create user
+  if (user) {
+    navigate("/");
+  }
+  // loading
+  if (loading) {
+    return <Loader />;
+  }
+  // declare a variable for store error message
+  let errorMessage = "";
+  // error message
+  if (error) {
+    errorMessage = <p className="text-danger">Error: {error?.message}</p>;
+  }
+
   return (
     <div
       style={{
@@ -13,30 +44,33 @@ const SignUp = () => {
     >
       <div className="login-bg col-11 col-sm-8 col-md-6 col-lg-4 mx-auto">
         <h1 className="mb-4">Sign up for free</h1>
-        <form>
+        <form onSubmit={handleRegister}>
           <Form.Group className="mb-3">
-            <Form.Control type="text" placeholder="Full name" required />
+            <Form.Control
+              type="text"
+              placeholder="Full name"
+              name="name"
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Control type="email" placeholder="Email address" required />
+            <Form.Control
+              type="email"
+              placeholder="Email address"
+              name="email"
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Control type="password" placeholder="Password" required />
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
           </Form.Group>
-          {/* <FloatingLabel
-        controlId="floatingInput"
-        label="Email address"
-        className="mb-3"
-      >
-        <Form.Control
-          type="email"
-          placeholder="name@example.com"
-          required
-        />
-      </FloatingLabel>
-      <FloatingLabel controlId="floatingPassword" label="Password">
-        <Form.Control type="password" placeholder="Password" required />
-      </FloatingLabel> */}
+
+          {errorMessage}
 
           <button type="submit" className="form-login-btn">
             Sign up with email

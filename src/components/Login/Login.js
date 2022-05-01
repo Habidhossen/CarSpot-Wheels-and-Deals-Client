@@ -1,19 +1,62 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/firebase.init";
+import Loader from "../Loader/Loader";
 import "./Login.css";
 
 const Login = () => {
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  // from react firebase hooks
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword, emailUser, emailLoading, emailError] =
+    useSignInWithEmailAndPassword(auth);
+  // const [sendPasswordResetEmail, sending, error] =
+  //   useSendPasswordResetEmail(auth);
+
+  // use navigate hook
   const navigate = useNavigate();
 
   // handle google sign-in
   const handleGoogleSignIn = () => {
     signInWithGoogle();
-    // navigate("/");
   };
+  // handle email-password sign-in
+  const handleEmailSignIn = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    signInWithEmailAndPassword(email, password);
+  };
+  // handle forget password
+  // const handleForgetPassword = (event) => {
+  //   event.preventDefault();
+  //   const email = event.target.email.value;
+  //   sendPasswordResetEmail(email);
+  // };
+
+  // if get user
+  if (googleUser || emailUser) {
+    navigate("/");
+  }
+  // loading
+  if (googleLoading || emailLoading) {
+    return <Loader />;
+  }
+  // declare a variable for store error message
+  let errorMessage = "";
+  // error message
+  if (googleError || emailError) {
+    errorMessage = (
+      <p className="text-danger">
+        Error: {googleError?.message || emailError?.message}
+      </p>
+    );
+  }
 
   return (
     <div
@@ -39,17 +82,26 @@ const Login = () => {
           <h5 className="mx-4 bar-text">OR</h5>
           <div className="bars"></div>
         </div>
-        <form>
+        <form onSubmit={handleEmailSignIn}>
           <Form.Group className="mb-3">
-            <Form.Control type="email" placeholder="Email address" required />
+            <Form.Control
+              type="email"
+              placeholder="Email address"
+              name="email"
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Control type="password" placeholder="Password" required />
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
           </Form.Group>
+          {errorMessage}
           <div className="my-3 text-end">
-            <Link to="" className="forget-password">
-              Forget Password?
-            </Link>
+            <button className="forget-password">Forget Password?</button>
           </div>
           <button type="submit" className="form-login-btn">
             Login with email

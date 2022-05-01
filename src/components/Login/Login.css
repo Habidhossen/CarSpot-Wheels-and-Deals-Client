@@ -29,6 +29,10 @@
 .forget-password {
   font-weight: 500;
   font-family: "Rajdhani", sans-serif;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: var(--color-blue);
 }
 .form-control {
   font-family: "Rajdhani", sans-serif;

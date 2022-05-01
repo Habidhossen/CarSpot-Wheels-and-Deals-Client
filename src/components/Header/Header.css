@@ -28,8 +28,8 @@
   transition: 0.2s;
 }
 .login-btn:hover {
-  background-color: var(--color-red);
-  border: 2px solid var(--color-red);
+  background-color: var(--color-heading);
+  border: 2px solid var(--color-heading);
   color: white;
 }
 .logout-btn {
