@@ -8,6 +8,7 @@ import CustomLink from "../CustomLink/CustomLink";
 import "./Header.css";
 
 const Header = () => {
+  // get user from react-firebase-hooks auth state
   const [user] = useAuthState(auth);
 
   // handle logout
@@ -30,9 +31,23 @@ const Header = () => {
             <Link className="nav-link" to="/">
               Manage Inventory
             </Link>
-            <Link className="nav-link" to="/">
+            {/* <Link className="nav-link" to="/">
               My Items
-            </Link>
+            </Link> */}
+            {/* {user ? (
+              <Link className="nav-link" to="/">
+                Add Item
+              </Link>
+            ) : (
+              ""
+            )}
+            {user ? (
+              <Link className="nav-link" to="/">
+                My Items
+              </Link>
+            ) : (
+              ""
+            )} */}
             <CustomLink className="nav-link" to="/blog">
               Blog
             </CustomLink>
