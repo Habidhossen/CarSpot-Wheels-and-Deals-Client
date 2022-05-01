@@ -1,9 +1,20 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../Firebase/firebase.init";
 import "./Login.css";
 
 const Login = () => {
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const navigate = useNavigate();
+
+  // handle google sign-in
+  const handleGoogleSignIn = () => {
+    signInWithGoogle();
+    // navigate("/");
+  };
+
   return (
     <div
       style={{
@@ -17,9 +28,12 @@ const Login = () => {
         <p>
           Don't have an account? <Link to="/signup">Sign Up Free</Link>
         </p>
-        <Link className="google-btn" to="">
+
+        {/* google login button */}
+        <button onClick={handleGoogleSignIn} className="google-btn">
           Continue with Google
-        </Link>
+        </button>
+
         <div className="d-flex align-items-center my-3">
           <div className="bars"></div>
           <h5 className="mx-4 bar-text">OR</h5>
@@ -32,20 +46,6 @@ const Login = () => {
           <Form.Group className="mb-3">
             <Form.Control type="password" placeholder="Password" required />
           </Form.Group>
-          {/* <FloatingLabel
-            controlId="floatingInput"
-            label="Email address"
-            className="mb-3"
-          >
-            <Form.Control
-              type="email"
-              placeholder="name@example.com"
-              required
-            />
-          </FloatingLabel>
-          <FloatingLabel controlId="floatingPassword" label="Password">
-            <Form.Control type="password" placeholder="Password" required />
-          </FloatingLabel> */}
           <div className="my-3 text-end">
             <Link to="" className="forget-password">
               Forget Password?

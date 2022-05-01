@@ -32,3 +32,20 @@
   border: 2px solid var(--color-red);
   color: white;
 }
+.logout-btn {
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-white);
+  padding: 6px 25px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.2s;
+}
+.logout-btn:hover {
+  background-color: var(--color-red-dark);
+  color: white;
+}
