@@ -5,6 +5,8 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
 import Loader from "../Loader/Loader";
 import "./Login.css";
@@ -33,11 +35,11 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
   // handle forget password
-  // const handleForgetPassword = (event) => {
-  //   event.preventDefault();
-  //   const email = event.target.email.value;
-  //   sendPasswordResetEmail(email);
-  // };
+  const handleForgetPassword = () => {
+    toast.success("Reset email send successfully!", {
+      theme: "colored",
+    });
+  };
 
   // if get user
   if (googleUser || emailUser) {
@@ -101,12 +103,16 @@ const Login = () => {
           </Form.Group>
           {errorMessage}
           <div className="my-3 text-end">
-            <button className="forget-password">Forget Password?</button>
+            <button onClick={handleForgetPassword} className="forget-password">
+              Forget Password?
+            </button>
           </div>
           <button type="submit" className="form-login-btn">
             Login with email
           </button>
         </form>
+        {/* Toast Container */}
+        <ToastContainer />
       </div>
     </div>
   );
