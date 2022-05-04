@@ -1,6 +1,8 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
 
 const AddInventory = () => {
@@ -16,6 +18,7 @@ const AddInventory = () => {
     const quantity = event.target.quantity.value;
     const imageURL = event.target.url.value;
     const desc = event.target.desc.value;
+    event.target.reset();
 
     // get all information in one object
     const product = {
@@ -37,7 +40,10 @@ const AddInventory = () => {
       body: JSON.stringify(product),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => data);
+    toast.success("Product added", {
+      theme: "colored",
+    });
   };
 
   return (
@@ -103,6 +109,8 @@ const AddInventory = () => {
             Add Inventory
           </button>
         </Form>
+        {/* Toast Container */}
+        <ToastContainer />
       </div>
     </div>
   );
