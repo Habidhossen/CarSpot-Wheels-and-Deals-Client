@@ -49,7 +49,7 @@ const AddInventory = () => {
 
   return (
     <div>
-      <div className="col-5 mx-auto add-item-container">
+      <div className="col-11 col-sm-11 col-md-6 col-lg-5 mx-auto add-item-container">
         <h3 className="add-item-title">Add new Product:</h3>
 
         <Form onSubmit={handleAddItem}>

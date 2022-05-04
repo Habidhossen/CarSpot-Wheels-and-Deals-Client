@@ -57,10 +57,10 @@ const UpdateInventory = () => {
 
   return (
     <div className="container mx-auto update-inventory-container row">
-      <div className="col-6">
+      <div className="col-11 col-sm-11 col-md-6 col-lg-6">
         <img className="inventory-card-img" src={inventory.imageURL} alt="" />
       </div>
-      <div className="col-6">
+      <div className="col-11 col-sm-11 col-md-6 col-lg-6">
         <h6 className="update-quantity-text">
           Id: <span>{inventory._id}</span>
         </h6>
