@@ -11,7 +11,7 @@ import SingleInventoryCard from "../SingleInventoryCard/SingleInventoryCard";
 import "./HomePage.css";
 
 const HomePage = () => {
-  const [inventories, setInventories] = useInventories();
+  const [inventories] = useInventories();
 
   return (
     <div>
