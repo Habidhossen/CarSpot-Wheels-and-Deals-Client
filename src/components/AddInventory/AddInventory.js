@@ -7,20 +7,41 @@ const AddInventory = () => {
   // get user from react-firebase-hooks auth state
   const [user] = useAuthState(auth);
 
+  const handleAddItem = (event) => {
+    event.preventDefault();
+    const userEmail = user.email;
+    const productName = event.target.productName.value;
+    const supplierName = event.target.supplierName.value;
+    const price = event.target.price.value;
+    const quantity = event.target.quantity.value;
+    const imageURL = event.target.url.value;
+    const desc = event.target.desc.value;
+
+    console.log(
+      userEmail,
+      productName,
+      supplierName,
+      price,
+      quantity,
+      imageURL,
+      desc
+    );
+  };
+
   return (
     <div>
       <div className="col-5 mx-auto">
         <h3>Add new Product:</h3>
 
-        <Form>
+        <Form onSubmit={handleAddItem}>
           <Form.Group className="mb-2">
-            <Form.Control placeholder={user?.email} name="name" disabled />
+            <Form.Control placeholder={user?.email} disabled />
           </Form.Group>
           <Form.Group className="mb-2">
             <Form.Control
               type="text"
               placeholder="Product name"
-              name="name"
+              name="productName"
               required
             />
           </Form.Group>
@@ -28,7 +49,7 @@ const AddInventory = () => {
             <Form.Control
               type="text"
               placeholder="Supplier name"
-              name="name"
+              name="supplierName"
               required
             />
           </Form.Group>
@@ -36,7 +57,7 @@ const AddInventory = () => {
             <Form.Control
               type="text"
               placeholder="$ Price"
-              name="name"
+              name="price"
               required
             />
           </Form.Group>
@@ -44,7 +65,7 @@ const AddInventory = () => {
             <Form.Control
               type="text"
               placeholder="Quantity"
-              name="name"
+              name="quantity"
               required
             />
           </Form.Group>
@@ -52,7 +73,7 @@ const AddInventory = () => {
             <Form.Control
               type="text"
               placeholder="Image url"
-              name="name"
+              name="url"
               required
             />
           </Form.Group>
@@ -60,6 +81,7 @@ const AddInventory = () => {
             <Form.Control
               as="textarea"
               rows={3}
+              name="desc"
               placeholder="Product desc..."
               required
             />
