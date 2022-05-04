@@ -8,7 +8,8 @@ const InventoryItems = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("carsData.json")
+    const url = "http://localhost:5000/inventory";
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
@@ -21,7 +22,7 @@ const InventoryItems = () => {
         </h1>
         <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
           {cars.map((car) => (
-            <SingleInventoryCard key={car.id} car={car} />
+            <SingleInventoryCard key={car._id} car={car} />
           ))}
         </div>
         <div className="d-flex justify-content-end mt-3">

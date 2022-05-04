@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./SingleInventoryCard.css";
 
 const SingleInventoryCard = ({ car }) => {
-  const { name, desc, price, quantity, supplier, image } = car;
+  const { _id, name, desc, price, quantity, supplier, image } = car;
 
   return (
     <div className="col">
@@ -22,7 +22,7 @@ const SingleInventoryCard = ({ car }) => {
           </h5>
         </div>
         <div className="d-flex justify-content-center">
-          <Link to="" className="inventory-card-btn">
+          <Link to={`/inventory/${_id}`} className="inventory-card-btn">
             Stock Update
           </Link>
         </div>
