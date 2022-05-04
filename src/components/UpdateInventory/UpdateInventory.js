@@ -13,7 +13,20 @@ const UpdateInventory = () => {
   }, []);
 
   // handle quantity delivered button
-  const handleDeliveredBtn = () => {};
+  const handleDeliveredBtn = () => {
+    const quantity = inventory.quantity;
+
+    const newQuantity = quantity - 1;
+
+    console.log(newQuantity);
+  };
+
+  // handle restock quantity
+  const handleReStock = (event) => {
+    event.preventDefault();
+    const value = event.target.quantity.value;
+    console.log(value);
+  };
 
   return (
     <div>
@@ -24,7 +37,7 @@ const UpdateInventory = () => {
         Delivered
       </button>
       <div className="mt-3">
-        <form>
+        <form onSubmit={handleReStock}>
           <input
             type="number"
             name="quantity"

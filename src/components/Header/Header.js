@@ -31,6 +31,9 @@ const Header = () => {
             <Link className="nav-link" to="/">
               Manage Inventory
             </Link>
+            <Link className="nav-link" to="/add-inventory">
+              Add Items
+            </Link>
             {/* <Link className="nav-link" to="/">
               My Items
             </Link> */}
