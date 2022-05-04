@@ -28,29 +28,21 @@ const Header = () => {
             <CustomLink className="nav-link" to="/">
               Home
             </CustomLink>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/inventory">
               Manage Inventory
             </Link>
-            <Link className="nav-link" to="/add-inventory">
-              Add Items
-            </Link>
-            {/* <Link className="nav-link" to="/">
-              My Items
-            </Link> */}
-            {/* {user ? (
-              <Link className="nav-link" to="/">
+
+            {user && (
+              <Link className="nav-link" to="/add-inventory">
                 Add Item
               </Link>
-            ) : (
-              ""
             )}
-            {user ? (
-              <Link className="nav-link" to="/">
+            {user && (
+              <Link className="nav-link" to="/my-inventory">
                 My Items
               </Link>
-            ) : (
-              ""
-            )} */}
+            )}
+
             <CustomLink className="nav-link" to="/blog">
               Blog
             </CustomLink>

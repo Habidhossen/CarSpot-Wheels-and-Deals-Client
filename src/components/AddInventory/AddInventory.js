@@ -17,15 +17,27 @@ const AddInventory = () => {
     const imageURL = event.target.url.value;
     const desc = event.target.desc.value;
 
-    console.log(
+    // get all information in one object
+    const product = {
       userEmail,
       productName,
       supplierName,
       price,
       quantity,
       imageURL,
-      desc
-    );
+      desc,
+    };
+
+    // send data to the server
+    fetch("http://localhost:5000/inventory", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   };
 
   return (
@@ -55,7 +67,7 @@ const AddInventory = () => {
           </Form.Group>
           <Form.Group className="mb-2">
             <Form.Control
-              type="text"
+              type="number"
               placeholder="$ Price"
               name="price"
               required
@@ -63,7 +75,7 @@ const AddInventory = () => {
           </Form.Group>
           <Form.Group className="mb-2">
             <Form.Control
-              type="text"
+              type="number"
               placeholder="Quantity"
               name="quantity"
               required

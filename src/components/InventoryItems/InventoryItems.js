@@ -1,37 +1,39 @@
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import SingleInventoryCard from "../SingleInventoryCard/SingleInventoryCard";
+import React from "react";
+import { Table } from "react-bootstrap";
+import useInventories from "../../hooks/useInventories";
 
 const InventoryItems = () => {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    const url = "http://localhost:5000/inventory";
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setCars(data));
-  }, []);
+  const [inventories] = useInventories();
 
   return (
-    <section>
-      <div className="container mx-auto">
-        <h1 className="section-title">
-          <span>Inventory</span> Items
-        </h1>
-        <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
-          {cars.map((car) => (
-            <SingleInventoryCard key={car._id} car={car} />
+    <div className="container mx-auto mt-5">
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Supplier</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {inventories.map((product) => (
+            <tr>
+              <td>{product._id}</td>
+              <td>{product.productName}</td>
+              <td>{product.supplierName}</td>
+              <td>{product.price}</td>
+              <td>{product.quantity}</td>
+              <td>
+                <button className="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
           ))}
-        </div>
-        <div className="d-flex justify-content-end mt-3">
-          <Link to="" className="see-more-btn">
-            Manage Inventories <FontAwesomeIcon icon={faArrowRightLong} />
-          </Link>
-        </div>
-      </div>
-    </section>
+        </tbody>
+      </Table>
+    </div>
   );
 };
 

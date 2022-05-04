@@ -2,17 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SingleInventoryCard.css";
 
-const SingleInventoryCard = ({ car }) => {
-  const { _id, name, desc, price, quantity, supplier, image } = car;
+const SingleInventoryCard = ({ product }) => {
+  const {
+    _id,
+    userEmail,
+    productName,
+    supplierName,
+    price,
+    quantity,
+    imageURL,
+    desc,
+  } = product;
 
   return (
     <div className="col">
       <div className="inventory-card">
-        <img className="inventory-card-img" src={image} alt="" />
+        <img className="inventory-card-img" src={imageURL} alt="" />
         <h5 className="inventory-card-supplier">
-          Supplier: <span>{supplier}</span>
+          Supplier: <span>{supplierName}</span>
         </h5>
-        <h1 className="inventory-card-title">{name}</h1>
+        <h1 className="inventory-card-title">{productName}</h1>
         <h3 className="inventory-card-price">$ {price}</h3>
         <p className="inventory-card-desc">{desc}</p>
         <div>
