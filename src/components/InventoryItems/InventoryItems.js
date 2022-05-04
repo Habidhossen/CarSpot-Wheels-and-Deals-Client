@@ -32,7 +32,7 @@ const InventoryItems = () => {
           <thead>
             <tr>
               <th>Admin</th>
-              <th>Name</th>
+              <th>Product</th>
               <th>Supplier</th>
               <th>Price</th>
               <th>Quantity</th>
