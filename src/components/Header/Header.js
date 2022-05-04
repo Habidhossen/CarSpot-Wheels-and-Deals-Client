@@ -28,19 +28,19 @@ const Header = () => {
             <CustomLink className="nav-link" to="/">
               Home
             </CustomLink>
-            <Link className="nav-link" to="/inventory">
+            <CustomLink className="nav-link" to="/inventory">
               Manage Inventory
-            </Link>
+            </CustomLink>
 
             {user && (
-              <Link className="nav-link" to="/add-inventory">
+              <CustomLink className="nav-link" to="/add-inventory">
                 Add Item
-              </Link>
+              </CustomLink>
             )}
             {user && (
-              <Link className="nav-link" to="/my-inventory">
+              <CustomLink className="nav-link" to="/my-inventory">
                 My Items
-              </Link>
+              </CustomLink>
             )}
 
             <CustomLink className="nav-link" to="/blog">

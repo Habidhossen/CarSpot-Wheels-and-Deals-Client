@@ -104,7 +104,6 @@ const AddInventory = () => {
               required
             />
           </Form.Group>
-
           <button type="submit" className="form-login-btn">
             Add Inventory
           </button>

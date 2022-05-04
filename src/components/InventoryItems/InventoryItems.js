@@ -7,18 +7,22 @@ const InventoryItems = () => {
 
   // handle delete inventory button
   const handleInventoryDelete = (id) => {
-    fetch(`http://localhost:5000/inventory/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.deletedCount > 0) {
-          const remainingProduct = inventories.filter(
-            (product) => product._id !== id
-          );
-          setInventories(remainingProduct);
-        }
-      });
+    const confirm = window.confirm("Are you sure you want to delete?");
+
+    if (confirm) {
+      fetch(`http://localhost:5000/inventory/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remainingProduct = inventories.filter(
+              (product) => product._id !== id
+            );
+            setInventories(remainingProduct);
+          }
+        });
+    }
   };
 
   return (
