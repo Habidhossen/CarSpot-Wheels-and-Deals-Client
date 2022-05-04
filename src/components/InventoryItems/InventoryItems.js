@@ -1,6 +1,9 @@
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Table } from "react-bootstrap";
 import useInventories from "../../hooks/useInventories";
+import "./InventoryItems.css";
 
 const InventoryItems = () => {
   const [inventories, setInventories] = useInventories();
@@ -27,7 +30,7 @@ const InventoryItems = () => {
 
   return (
     <div className="container mt-5">
-      <div className="login-bg">
+      <div className="table-container-bg">
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -52,7 +55,7 @@ const InventoryItems = () => {
                     onClick={() => handleInventoryDelete(product._id)}
                     className="btn btn-danger btn-sm"
                   >
-                    Delete
+                    Delete <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
                   </button>
                 </td>
               </tr>

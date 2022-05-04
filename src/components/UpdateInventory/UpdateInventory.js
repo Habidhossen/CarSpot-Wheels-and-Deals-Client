@@ -1,5 +1,9 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Form } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
+import "./UpdateInventory.css";
 
 const UpdateInventory = () => {
   const { inventoryID } = useParams();
@@ -52,23 +56,63 @@ const UpdateInventory = () => {
   };
 
   return (
-    <div>
-      <h6>Inventory ID: {inventory._id}</h6>
-      <h6>Inventory Name: {inventory.name}</h6>
-      <h1>Quantity: {inventory.quantity}</h1>
-      <button onClick={handleDeliveredBtn} className="btn btn-danger">
-        Delivered
-      </button>
-      <div className="mt-3">
-        <form onSubmit={handleReStock}>
-          <input
-            type="number"
-            name="quantity"
-            placeholder="Enter value"
-            required
-          />
-          <input className="btn btn-primary" type="submit" value="Restock" />
-        </form>
+    <div className="container mx-auto update-inventory-container row">
+      <div className="col-6">
+        <img className="inventory-card-img" src={inventory.imageURL} alt="" />
+      </div>
+      <div className="col-6">
+        <h6 className="update-quantity-text">
+          Id: <span>{inventory._id}</span>
+        </h6>
+        <h6 className="update-quantity-text">
+          Email: <span>{inventory.userEmail}</span>
+        </h6>
+        <h6 className="update-quantity-text">
+          Product Name: <span>{inventory.productName}</span>
+        </h6>
+        <h6 className="update-quantity-text">
+          Supplier Name: <span>{inventory.supplierName}</span>
+        </h6>
+        <h6 className="update-quantity-text">
+          Price: <span>{inventory.price}</span>
+        </h6>
+        <h6 className="update-quantity-text">
+          Quantity: <span>{inventory.quantity}</span>
+        </h6>
+
+        <div className="mt-3">
+          <form onSubmit={handleReStock}>
+            <p className="update-quantity-text text-success mb-1">
+              Restock the Items
+            </p>
+            <div className="d-flex">
+              <Form.Control
+                className="w-75"
+                type="number"
+                name="quantity"
+                placeholder="Enter Quantity"
+                required
+              />
+              <input
+                className="restock-btn w-25 ms-2"
+                type="submit"
+                value="Restock"
+              />
+            </div>
+          </form>
+          <div className="d-flex justify-content-between mt-3">
+            <button
+              onClick={handleDeliveredBtn}
+              className="delivered-btn w-100 me-2"
+            >
+              Delivered
+            </button>
+            <Link to="/inventory" className="manage-inventories-btn ms-2">
+              Manage Inventories{" "}
+              <FontAwesomeIcon className="ms-1" icon={faArrowRight} />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ const MyInventoryItem = () => {
 
   return (
     <div className="container mt-5">
-      <div className="login-bg">
+      <div className="table-container-bg">
         <Table striped bordered hover>
           <thead>
             <tr>

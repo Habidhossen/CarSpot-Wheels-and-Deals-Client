@@ -1,0 +1,13 @@
+.add-item-container {
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.add-item-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}

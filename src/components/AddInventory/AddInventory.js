@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
+import "./AddInventory.css";
 
 const AddInventory = () => {
   // get user from react-firebase-hooks auth state
@@ -48,8 +49,8 @@ const AddInventory = () => {
 
   return (
     <div>
-      <div className="col-5 mx-auto">
-        <h3>Add new Product:</h3>
+      <div className="col-5 mx-auto add-item-container">
+        <h3 className="add-item-title">Add new Product:</h3>
 
         <Form onSubmit={handleAddItem}>
           <Form.Group className="mb-2">
@@ -74,7 +75,7 @@ const AddInventory = () => {
           <Form.Group className="mb-2">
             <Form.Control
               type="number"
-              placeholder="$ Price"
+              placeholder="$Price"
               name="price"
               required
             />
