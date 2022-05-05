@@ -23,8 +23,20 @@
   font-weight: 700;
   color: var(--color-text);
 }
+.news-card-sub-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-text-2);
+  margin-bottom: 8px;
+}
 .news-card-text {
   font-family: "Rajdhani", sans-serif;
   font-size: 16px;
   color: var(--color-text-2);
+}
+.news-card-text span {
+  color: var(--color-red);
+  font-weight: 600;
 }
