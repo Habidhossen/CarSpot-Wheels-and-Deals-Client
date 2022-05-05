@@ -18,12 +18,12 @@ const SingleInventoryCard = ({ product }) => {
     <div className="col">
       <div className="inventory-card">
         <img className="inventory-card-img" src={imageURL} alt="" />
+        <h3 className="inventory-card-price">$ {price}</h3>
+        <h1 className="inventory-card-title">{productName}</h1>
         <h5 className="inventory-card-supplier">
           Supplier: <span>{supplierName}</span>
         </h5>
-        <h1 className="inventory-card-title">{productName}</h1>
-        <h3 className="inventory-card-price">$ {price}</h3>
-        <p className="inventory-card-desc">{desc}</p>
+        <p className="inventory-card-desc">{desc.slice(0, 200) + "..."}</p>
         <div>
           <h5 className="inventory-card-quantity">
             Quantity: <b>{quantity}</b>{" "}

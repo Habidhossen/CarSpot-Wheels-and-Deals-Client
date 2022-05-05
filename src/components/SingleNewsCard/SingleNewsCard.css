@@ -9,8 +9,8 @@
   cursor: pointer;
 }
 .news-card:hover {
-  /* transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 .news-card-img {
   border-top-left-radius: 8px;

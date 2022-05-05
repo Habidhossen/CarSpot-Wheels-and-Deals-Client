@@ -19,7 +19,7 @@ const About = () => {
         </p>
       </div>
       <div className="mt-4">
-        <h3 className="about-title">About me</h3>
+        <h3 className="about-title-blue">About me</h3>
         <p className="about-desc">
           Hello! I'm <span>Habid Hossen Hridoy.</span> I'm from Chattogram,
           Bangladesh. I am a student of Computer Science and Engineering. I like

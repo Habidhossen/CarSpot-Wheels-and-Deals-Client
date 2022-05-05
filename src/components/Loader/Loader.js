@@ -7,7 +7,7 @@ const Loader = () => {
       className="d-flex align-items-center justify-content-center"
       style={{ height: "400px" }}
     >
-      <Spinner animation="grow" variant="danger" />
+      <Spinner animation="grow" variant="dark" />
     </div>
   );
 };

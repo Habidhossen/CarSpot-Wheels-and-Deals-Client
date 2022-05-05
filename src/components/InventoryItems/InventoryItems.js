@@ -35,7 +35,7 @@ const InventoryItems = () => {
       {loader ? (
         <Loader />
       ) : (
-        <div className="container mt-5">
+        <div className="container my-5">
           <div className="table-container-bg">
             <div className="d-flex justify-content-between mb-3">
               <h3 className="add-item-title mb-0 mt-2">All Products:</h3>
@@ -47,7 +47,7 @@ const InventoryItems = () => {
             <Table striped bordered hover>
               <thead>
                 <tr>
-                  <th>Admin</th>
+                  <th>Admin Email</th>
                   <th>Product</th>
                   <th>Supplier</th>
                   <th>Price</th>

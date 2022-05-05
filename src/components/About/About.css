@@ -17,6 +17,13 @@
   text-align: center;
   margin-bottom: 8px;
 }
+.about-title-blue {
+  color: var(--color-blue);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
 .about-desc {
   color: var(--color-text);
   font-size: 16px;
