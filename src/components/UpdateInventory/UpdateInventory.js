@@ -63,10 +63,10 @@ const UpdateInventory = () => {
 
   return (
     <div className="container mx-auto update-inventory-container row">
-      <div className="col-11 col-sm-11 col-md-6 col-lg-6">
+      <div className="col-12 col-sm-12 col-md-12 col-lg-6">
         <img className="inventory-card-img" src={inventory.imageURL} alt="" />
       </div>
-      <div className="col-11 col-sm-11 col-md-6 col-lg-6">
+      <div className="col-12 col-sm-12 col-md-12 col-lg-6">
         <h6 className="update-quantity-text">
           Id: <span>{inventory._id}</span>
         </h6>
@@ -107,10 +107,7 @@ const UpdateInventory = () => {
             </div>
           </form>
           <div className="d-flex justify-content-between mt-3">
-            <button
-              onClick={handleDeliveredBtn}
-              className="delivered-btn w-100 me-2"
-            >
+            <button onClick={handleDeliveredBtn} className="delivered-btn me-2">
               Delivered
             </button>
             <Link to="/inventory" className="manage-inventories-btn ms-2">

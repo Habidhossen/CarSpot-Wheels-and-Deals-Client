@@ -25,3 +25,15 @@ section {
 .see-more-btn:hover {
   color: var(--color-heading);
 }
+/* --------------------
+media query for small devices
+-------------------- */
+@media screen and (max-width: 688px) {
+  section {
+    margin: 40px 0;
+  }
+  .section-title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+}

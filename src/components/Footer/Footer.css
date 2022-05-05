@@ -1,6 +1,7 @@
 footer {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-family: "Rajdhani", sans-serif;
   background-color: var(--color-heading);
   color: var(--color-bg-light);
@@ -17,4 +18,12 @@ footer {
   width: 1px;
   background-color: var(--color-bg-light);
   margin: 4px 10px;
+}
+/* --------------------
+media query for small devices
+-------------------- */
+@media screen and (max-width: 688px) {
+  .footer-desc {
+    font-size: 12px;
+  }
 }

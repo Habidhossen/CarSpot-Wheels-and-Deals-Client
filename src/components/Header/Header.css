@@ -49,3 +49,42 @@
   background-color: var(--color-red-dark);
   color: white;
 }
+/* --------------------
+media query for small devices
+-------------------- */
+@media screen and (max-width: 688px) {
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: center;
+  }
+  .login-btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .logout-btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+/* --------------------
+media query for medium devices
+-------------------- */
+@media screen and (min-width: 689px) and (max-width: 992px) {
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  .login-btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .logout-btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

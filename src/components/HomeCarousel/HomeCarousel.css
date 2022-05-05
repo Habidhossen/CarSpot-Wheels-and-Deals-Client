@@ -26,3 +26,39 @@
   font-weight: 500;
   font-size: 22px;
 }
+/* --------------------
+media query for small devices
+-------------------- */
+@media screen and (max-width: 688px) {
+  .carousel-item img {
+    height: 400px;
+    background-size: cover;
+  }
+  .captions h3 {
+    font-size: 28px;
+  }
+  .captions p {
+    font-size: 14px;
+  }
+  .captions h3 span::before {
+    display: none;
+  }
+}
+/* --------------------
+media query for medium devices
+-------------------- */
+@media screen and (min-width: 689px) and (max-width: 992px) {
+  .carousel-item img {
+    height: 100%;
+    background-size: cover;
+  }
+  .captions h3 {
+    font-size: 30px;
+  }
+  .captions p {
+    font-size: 16px;
+  }
+  .captions h3 span::before {
+    display: none;
+  }
+}

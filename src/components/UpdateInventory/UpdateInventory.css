@@ -68,3 +68,27 @@
   background-color: var(--color-blue-dark);
   color: var(--color-white);
 }
+/* --------------------
+media query for small devices
+-------------------- */
+@media screen and (max-width: 688px) {
+  .update-inventory-container {
+    padding: 10px;
+    margin: 10px;
+  }
+  .restock-btn {
+    padding: 8px 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .delivered-btn {
+    padding: 8px 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .manage-inventories-btn {
+    padding: 8px 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
