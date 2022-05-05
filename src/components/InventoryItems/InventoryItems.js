@@ -1,7 +1,8 @@
-import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faAdd, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useInventories from "../../hooks/useInventories";
 import "./InventoryItems.css";
 
@@ -31,6 +32,12 @@ const InventoryItems = () => {
   return (
     <div className="container mt-5">
       <div className="table-container-bg">
+        <div className="d-flex justify-content-between mb-3">
+          <h3 className="add-item-title mb-0 mt-2">All Products:</h3>
+          <Link to="/add-inventory" className="btn btn-success">
+            Add new product <FontAwesomeIcon className="ms-1" icon={faAdd} />
+          </Link>
+        </div>
         <Table striped bordered hover>
           <thead>
             <tr>

@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import About from "./components/About/About";
 import AddInventory from "./components/AddInventory/AddInventory";
 import Blog from "./components/Blog/Blog";
 import Header from "./components/Header/Header";
@@ -19,10 +20,15 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
         <Route path="/inventory" element={<InventoryItems />} />
+        <Route
+          path="/inventory/:inventoryID"
+          element={
+            <RequireAuth>
+              <UpdateInventory />
+            </RequireAuth>
+          }
+        />
         <Route
           path="/add-inventory"
           element={
@@ -39,14 +45,10 @@ function App() {
             </RequireAuth>
           }
         />
-        <Route
-          path="/inventory/:inventoryID"
-          element={
-            <RequireAuth>
-              <UpdateInventory />
-            </RequireAuth>
-          }
-        />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
