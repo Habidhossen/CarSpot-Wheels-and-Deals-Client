@@ -1,3 +1,5 @@
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -21,7 +23,7 @@ const MyInventoryItem = () => {
     const confirm = window.confirm("Are you sure you want to delete?");
 
     if (confirm) {
-      fetch(`http://localhost:5000/inventory/${id}`, {
+      fetch(`https://radiant-waters-02359.herokuapp.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -63,7 +65,7 @@ const MyInventoryItem = () => {
                     onClick={() => handleInventoryDelete(product._id)}
                     className="btn btn-danger btn-sm"
                   >
-                    Delete
+                    Delete <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
                   </button>
                 </td>
               </tr>

@@ -13,7 +13,7 @@ const InventoryItems = () => {
     const confirm = window.confirm("Are you sure you want to delete?");
 
     if (confirm) {
-      fetch(`http://localhost:5000/inventory/${id}`, {
+      fetch(`https://radiant-waters-02359.herokuapp.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

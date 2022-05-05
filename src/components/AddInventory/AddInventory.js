@@ -33,7 +33,7 @@ const AddInventory = () => {
     };
 
     // send data to the server
-    fetch("http://localhost:5000/inventory", {
+    fetch("https://radiant-waters-02359.herokuapp.com/inventory", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
