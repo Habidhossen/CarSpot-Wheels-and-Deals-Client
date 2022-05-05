@@ -4,10 +4,11 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useInventories from "../../hooks/useInventories";
+import Loader from "../Loader/Loader";
 import "./InventoryItems.css";
 
 const InventoryItems = () => {
-  const [inventories, setInventories] = useInventories();
+  const [inventories, setInventories, loader] = useInventories();
 
   // handle delete inventory button
   const handleInventoryDelete = (id) => {
@@ -30,47 +31,55 @@ const InventoryItems = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <div className="table-container-bg">
-        <div className="d-flex justify-content-between mb-3">
-          <h3 className="add-item-title mb-0 mt-2">All Products:</h3>
-          <Link to="/add-inventory" className="btn btn-success">
-            Add new product <FontAwesomeIcon className="ms-1" icon={faAdd} />
-          </Link>
+    <>
+      {loader ? (
+        <Loader />
+      ) : (
+        <div className="container mt-5">
+          <div className="table-container-bg">
+            <div className="d-flex justify-content-between mb-3">
+              <h3 className="add-item-title mb-0 mt-2">All Products:</h3>
+              <Link to="/add-inventory" className="btn btn-success">
+                Add new product{" "}
+                <FontAwesomeIcon className="ms-1" icon={faAdd} />
+              </Link>
+            </div>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Admin</th>
+                  <th>Product</th>
+                  <th>Supplier</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {inventories.map((product) => (
+                  <tr key={product._id}>
+                    <td>{product.userEmail}</td>
+                    <td>{product.productName}</td>
+                    <td>{product.supplierName}</td>
+                    <td>{product.price}</td>
+                    <td>{product.quantity}</td>
+                    <td>
+                      <button
+                        onClick={() => handleInventoryDelete(product._id)}
+                        className="btn btn-danger btn-sm"
+                      >
+                        Delete{" "}
+                        <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
         </div>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Admin</th>
-              <th>Product</th>
-              <th>Supplier</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {inventories.map((product) => (
-              <tr key={product._id}>
-                <td>{product.userEmail}</td>
-                <td>{product.productName}</td>
-                <td>{product.supplierName}</td>
-                <td>{product.price}</td>
-                <td>{product.quantity}</td>
-                <td>
-                  <button
-                    onClick={() => handleInventoryDelete(product._id)}
-                    className="btn btn-danger btn-sm"
-                  >
-                    Delete <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

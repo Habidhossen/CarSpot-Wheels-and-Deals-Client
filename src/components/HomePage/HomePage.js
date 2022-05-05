@@ -7,11 +7,12 @@ import CarLatestNews from "../CarLatestNews/CarLatestNews";
 import ClientReviews from "../ClientReviews/ClientReviews";
 import Footer from "../Footer/Footer";
 import HomeCarousel from "../HomeCarousel/HomeCarousel";
+import Loader from "../Loader/Loader";
 import SingleInventoryCard from "../SingleInventoryCard/SingleInventoryCard";
 import "./HomePage.css";
 
 const HomePage = () => {
-  const [inventories] = useInventories();
+  const [inventories, setInventories, loader] = useInventories();
 
   return (
     <div>
@@ -21,21 +22,25 @@ const HomePage = () => {
 
       {/* inventory-items section start here */}
       <section>
-        <div className="container mx-auto">
-          <h1 className="section-title">
-            <span>Inventory</span> Items
-          </h1>
-          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
-            {inventories.slice(0, 6).map((product) => (
-              <SingleInventoryCard key={product._id} product={product} />
-            ))}
+        {loader ? (
+          <Loader />
+        ) : (
+          <div className="container mx-auto">
+            <h1 className="section-title">
+              <span>Inventory</span> Items
+            </h1>
+            <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+              {inventories.slice(0, 6).map((product) => (
+                <SingleInventoryCard key={product._id} product={product} />
+              ))}
+            </div>
+            <div className="d-flex justify-content-end mt-3">
+              <Link to="/inventory" className="see-more-btn">
+                Manage Inventories <FontAwesomeIcon icon={faArrowRightLong} />
+              </Link>
+            </div>
           </div>
-          <div className="d-flex justify-content-end mt-3">
-            <Link to="/inventory" className="see-more-btn">
-              Manage Inventories <FontAwesomeIcon icon={faArrowRightLong} />
-            </Link>
-          </div>
-        </div>
+        )}
       </section>
       {/* inventory-items end here */}
 
