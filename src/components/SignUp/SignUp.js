@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Form } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/firebase.init";
 import Loader from "../Loader/Loader";
 
@@ -9,6 +9,9 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
+  const location = useLocation();
+  // get user current location
+  let from = location.state?.from?.pathname || "/";
 
   // handle registration using name, email and password
   const handleRegister = (event) => {
@@ -20,9 +23,12 @@ const SignUp = () => {
   };
 
   // if create user
-  if (user) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+    }
+  }, [user]);
+
   // loading
   if (loading) {
     return <Loader />;

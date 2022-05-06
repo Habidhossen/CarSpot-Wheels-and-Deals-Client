@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Form } from "react-bootstrap";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
@@ -22,6 +22,9 @@ const Login = () => {
 
   // use navigate hook
   const navigate = useNavigate();
+  const location = useLocation();
+  // get user current location
+  let from = location.state?.from?.pathname || "/";
 
   // handle google sign-in
   const handleGoogleSignIn = () => {
@@ -42,9 +45,12 @@ const Login = () => {
   };
 
   // if get user
-  if (googleUser || emailUser) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (googleUser || emailUser) {
+      navigate(from, { replace: true });
+    }
+  }, [googleUser, emailUser]);
+
   // loading
   if (googleLoading || emailLoading) {
     return <Loader />;
