@@ -1,4 +1,8 @@
-import { faAdd, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAdd,
+  faPenToSquare,
+  faTrashCan,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Table } from "react-bootstrap";
@@ -64,13 +68,24 @@ const InventoryItems = () => {
                     <td>{product.price}</td>
                     <td>{product.quantity}</td>
                     <td>
-                      <button
-                        onClick={() => handleInventoryDelete(product._id)}
-                        className="btn btn-danger btn-sm"
-                      >
-                        Delete{" "}
-                        <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
-                      </button>
+                      <div className="px-2">
+                        <Link
+                          to={`/inventory/${product._id}`}
+                          className="btn btn-primary btn-sm me-3"
+                        >
+                          Stock Update{" "}
+                          <FontAwesomeIcon
+                            icon={faPenToSquare}
+                          ></FontAwesomeIcon>
+                        </Link>
+                        <button
+                          onClick={() => handleInventoryDelete(product._id)}
+                          className="btn btn-danger btn-sm"
+                        >
+                          Delete{" "}
+                          <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}

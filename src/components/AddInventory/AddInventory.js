@@ -44,6 +44,7 @@ const AddInventory = () => {
       .then((data) => data);
     toast.success("Product added", {
       theme: "colored",
+      autoClose: 2000,
     });
   };
 
