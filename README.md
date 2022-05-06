@@ -17,12 +17,4 @@ Live Site: [https://carspot-wheels-and-deals.web.app/](https://carspot-wheels-an
 
 ### Uses Technologies
 
-- `React`
-- `React-Router`
-- `React-Bootstrap`
-- `Firebase`
-- `React-Firebase-Hooks`
-- `Node.js`
-- `Express.js`
-- `MongoDB`
-- `React-Toastify`
+`React`, `React-Router`, `React-Bootstrap`, `Firebase`, `React-Firebase-Hooks`, `Node.js`, `Express.js`, `MongoDB`, `React-Toastify`
