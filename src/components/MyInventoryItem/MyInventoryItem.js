@@ -47,38 +47,43 @@ const MyInventoryItem = () => {
         <div className="container my-5">
           <div className="table-container-bg">
             <h3 className="add-item-title">My Products:</h3>
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>Id</th>
-                  <th>Product</th>
-                  <th>Supplier</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredItems.map((product) => (
-                  <tr key={product._id}>
-                    <td>{product._id}</td>
-                    <td>{product.productName}</td>
-                    <td>{product.supplierName}</td>
-                    <td>{product.price}</td>
-                    <td>{product.quantity}</td>
-                    <td>
-                      <button
-                        onClick={() => handleInventoryDelete(product._id)}
-                        className="btn btn-danger btn-sm"
-                      >
-                        Delete{" "}
-                        <FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon>
-                      </button>
-                    </td>
+            <div className="table-responsive">
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Product</th>
+                    <th>Supplier</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </Table>
+                </thead>
+                <tbody>
+                  {filteredItems.map((product) => (
+                    <tr key={product._id}>
+                      <td>{product._id}</td>
+                      <td>{product.productName}</td>
+                      <td>{product.supplierName}</td>
+                      <td>{product.price}</td>
+                      <td>{product.quantity}</td>
+                      <td>
+                        <button
+                          onClick={() => handleInventoryDelete(product._id)}
+                          className="btn btn-danger btn-sm d-flex align-items-center"
+                        >
+                          Delete
+                          <FontAwesomeIcon
+                            className="ms-1"
+                            icon={faTrashCan}
+                          ></FontAwesomeIcon>
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </div>
           </div>
         </div>
       )}
