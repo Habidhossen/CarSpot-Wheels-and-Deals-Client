@@ -31,8 +31,8 @@ media query for small devices
 -------------------- */
 @media screen and (max-width: 688px) {
   .carousel-item img {
-    height: 400px;
-    background-size: cover;
+    height: 500px;
+    object-fit: cover;
   }
   .captions h3 {
     font-size: 28px;
@@ -50,7 +50,7 @@ media query for medium devices
 @media screen and (min-width: 689px) and (max-width: 992px) {
   .carousel-item img {
     height: 100%;
-    background-size: cover;
+    object-fit: cover;
   }
   .captions h3 {
     font-size: 30px;

@@ -13,7 +13,7 @@ const useInventories = () => {
         setInventories(data);
         setLoader(false);
       });
-  }, []);
+  }, [setInventories]);
 
   return [inventories, setInventories, loader];
 };
