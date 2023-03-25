@@ -6,7 +6,7 @@ const useInventories = () => {
 
   useEffect(() => {
     setLoader(true);
-    const url = "https://radiant-waters-02359.herokuapp.com/inventory";
+    const url = "https://carspot-server.onrender.com/inventory";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

@@ -33,7 +33,7 @@ const AddInventory = () => {
     };
 
     // send data to the server
-    fetch("https://radiant-waters-02359.herokuapp.com/inventory", {
+    fetch("https://carspot-server.onrender.com/inventory", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

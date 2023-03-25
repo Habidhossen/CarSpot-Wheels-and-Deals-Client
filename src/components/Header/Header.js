@@ -44,7 +44,7 @@ const Header = () => {
             )}
 
             <CustomLink className="nav-link" to="/blog">
-              Blog
+              News
             </CustomLink>
             <CustomLink className="nav-link" to="/about">
               About

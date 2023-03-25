@@ -11,7 +11,7 @@ const UpdateInventory = () => {
 
   // load data
   useEffect(() => {
-    const url = `https://radiant-waters-02359.herokuapp.com/inventory/${inventoryID}`;
+    const url = `https://carspot-server.onrender.com/inventory/${inventoryID}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventory(data));
@@ -23,16 +23,13 @@ const UpdateInventory = () => {
     const updatedQuantity = { quantity }; //create quantity object
 
     // update quantity
-    fetch(
-      `https://radiant-waters-02359.herokuapp.com/inventory/${inventoryID}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedQuantity),
-      }
-    )
+    fetch(`https://carspot-server.onrender.com/inventory/${inventoryID}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedQuantity),
+    })
       .then((res) => res.json())
       .then((data) => {});
   };
@@ -45,16 +42,13 @@ const UpdateInventory = () => {
     const updatedQuantity = { quantity }; //create quantity object
 
     // update quantity
-    fetch(
-      `https://radiant-waters-02359.herokuapp.com/inventory/${inventoryID}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedQuantity),
-      }
-    )
+    fetch(`https://carspot-server.onrender.com/inventory/${inventoryID}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedQuantity),
+    })
       .then((res) => res.json())
       .then((data) => {
         event.target.reset();

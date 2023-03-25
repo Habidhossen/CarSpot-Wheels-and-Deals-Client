@@ -19,7 +19,7 @@ const InventoryItems = () => {
     const confirm = window.confirm("Are you sure you want to delete?");
 
     if (confirm) {
-      fetch(`https://radiant-waters-02359.herokuapp.com/inventory/${id}`, {
+      fetch(`https://carspot-server.onrender.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
